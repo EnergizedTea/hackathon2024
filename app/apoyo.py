@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(877, 894)
+        MainWindow.resize(1025, 894)
         MainWindow.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonIconOnly)
@@ -708,25 +708,10 @@ class Ui_MainWindow(object):
         self.label_12.setStyleSheet("color:white;\n"
 "background-color: rgb(112, 169, 255);\n"
 "border-radius: 40px;\n"
-"font: 30pt \"Courier New\";")
+"font: 20pt \"Courier New\";")
         self.label_12.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_12.setObjectName("label_12")
         self.verticalLayout_10.addWidget(self.label_12)
-        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.tronco_superior = QtWidgets.QRadioButton(parent=self.page_2)
-        self.tronco_superior.setStyleSheet("background-color: rgba(0, 0,0, 0);")
-        self.tronco_superior.setAutoExclusive(False)
-        self.tronco_superior.setObjectName("tronco_superior")
-        self.horizontalLayout_6.addWidget(self.tronco_superior)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem2)
-        self.tronco_inferior = QtWidgets.QRadioButton(parent=self.page_2)
-        self.tronco_inferior.setStyleSheet("background-color: rgba(0, 0,0, 0);")
-        self.tronco_inferior.setAutoExclusive(False)
-        self.tronco_inferior.setObjectName("tronco_inferior")
-        self.horizontalLayout_6.addWidget(self.tronco_inferior)
-        self.verticalLayout_10.addLayout(self.horizontalLayout_6)
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.pushButton_16 = QtWidgets.QPushButton(parent=self.page_2)
@@ -795,7 +780,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 100, 1284))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 82, 1284))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_13.setContentsMargins(-1, -1, -1, 15)
@@ -1022,7 +1007,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 877, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1025, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -1036,7 +1021,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "First Care"))
+        self.label.setText(_translate("MainWindow", "FitEase"))
         self.label_2.setText(_translate("MainWindow", "Salud Física"))
         self.label_5.setText(_translate("MainWindow", "Salud Psicológica"))
         self.label_3.setText(_translate("MainWindow", "Ayuda en línea con:"))
@@ -1055,9 +1040,7 @@ class Ui_MainWindow(object):
         self.ganar_musculo.setText(_translate("MainWindow", "Ganar músculo"))
         self.perder_grasa.setText(_translate("MainWindow", "Perder grasa"))
         self.balancear.setText(_translate("MainWindow", "Balancear nutrientes"))
-        self.label_12.setText(_translate("MainWindow", "Grupo de musculos a trabajar:"))
-        self.tronco_superior.setText(_translate("MainWindow", "Tronco superior"))
-        self.tronco_inferior.setText(_translate("MainWindow", "Tronco inferior"))
+        self.label_12.setText(_translate("MainWindow", "Plan de recomendaciones de dieta y ejercicio recomendado:"))
         self.pushButton_16.setText(_translate("MainWindow", "Descargar plan"))
         self.label_13.setText(_translate("MainWindow", "Padecimientos comunes:"))
         self.label_21.setText(_translate("MainWindow", "Depresión: Caracterizado por bajo estado\n"

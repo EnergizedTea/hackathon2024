@@ -10,7 +10,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         pygame.mixer.init()
         self.regresar()
-        self.advertencia('Esta solo es un herramienta de apoyo no es un diagnóstico, consulte a un profesional.')
+        self.advertencia('Esta solo es un herramienta de apoyo no es un diagnóstico, en caso de necesitarlo consulte a un profesional.')
         self.btn_inicio1.clicked.connect(self.regresar)
         self.btn_inicio_2.clicked.connect(self.regresar)
         self.btn_inicio3.clicked.connect(self.regresar)
@@ -96,7 +96,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         return eleccion
     def descargar_pdf(self):
         dieta = self.checar_botones(self.horizontalLayout_5)
-        ejercicio = self.checar_botones(self.horizontalLayout_6)
         url_pdf = None
         if dieta == 'ganar_musculo':
             url_pdf = 'https://github.com/EnergizedTea/hackathon2024/raw/main/Dieta%20ganar%20musculo.pdf'
@@ -104,15 +103,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             url_pdf = 'https://github.com/EnergizedTea/hackathon2024/raw/main/Dieta%20perder%20grasa.pdf'
         elif dieta == 'balancear':
             url_pdf = 'https://github.com/EnergizedTea/hackathon2024/raw/main/Dieta%20balanceada.pdf'
-        if ejercicio:
-            try:
-                response = requests.get(url_pdf)
-                response.raise_for_status()
-                with open("Dieta.pdf", "wb") as archivo:
-                    archivo.write(response.content)
-                QMessageBox.information(self, "Descarga Exitosa", "El PDF se ha descargado exitosamente ")
-            except requests.exceptions.RequestException as e:
-                QMessageBox.warning(self, "Error de Descarga", f"Ocurrió un error al descargar el PDF: {e}")
+        try:
+            response = requests.get(url_pdf)
+            response.raise_for_status()
+            with open("Dieta.pdf", "wb") as archivo:
+                archivo.write(response.content)
+            QMessageBox.information(self, "Descarga Exitosa", "El PDF se ha descargado exitosamente ")
+        except requests.exceptions.RequestException as e:
+            QMessageBox.warning(self, "Error de Descarga", f"Ocurrió un error al descargar el PDF: revise selección")
 if __name__=='__main__':
     app = QtWidgets.QApplication([])
     window = MainWindow()
