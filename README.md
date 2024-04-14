@@ -1,3 +1,5 @@
+El proyecto se trata de una aplicación de escritorio con el propósito de servir como un adentramiento a una vida más saludable por medio de facilitar el acceso a recursos de temas que abarcan desde molestias generales, información sobre padecimientos mentales comunes y recomendaciones de dietas y ejercicio.
+
 Indicaciones para la instalación de la aplicación
 
 1. Instalar los requisitos: Utilice el siguiente comando para instalar los requisitos desde el archivo requirements.txt:
